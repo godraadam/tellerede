@@ -42,7 +42,7 @@ public class ConcertResource {
         return concertAssembler.createDTOList(concertService.getConcertsForPerformer(performer));
     }
 
-    @PostMapping("api/concert/add")
+    @PostMapping("admin/api/concert/add")
     public Concert addConcert(@RequestBody ConcertDTO dto) {
         return concertService.addConcert(concertAssembler.createModel(dto));
     }
